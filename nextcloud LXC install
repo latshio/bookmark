@@ -1,1 +1,7 @@
 https://www.youtube.com/watch?v=427LxkdDzQs
+
+
+edit the trusted hostes 
+
+
+sudo nextcloud.occ config:system:set trusted_domains 1 --value=example.com
