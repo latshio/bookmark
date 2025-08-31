@@ -11,3 +11,34 @@ sudo nextcloud.occ config:system:set trusted_domains 1 --value=example.com
 add talk to your next cloud
 
 https://www.youtube.com/watch?v=RPireLVSPAo
+-----------------------------------------------------------------------------
+
+
+    Install Nextcloud
+
+sudo snap install nextcloud
+
+    Make admin account
+
+sudo nextcloud.manual-install ADMINUSER PASSWORD
+
+    Add Trusted Domains
+
+sudo nextcloud.occ config:system:set trusted_domains 1 --value=YOUR.DOMAIN.HERE
+
+    Open firewall ports in /etc/iptables/rules.v4 add two lines below:
+
+iptables -I INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+
+    Reload iptables running config 
+
+iptables-restore '＜' /etc/iptables/rules.v4
+
+    Set SSL
+
+sudo nextcloud.enable-https lets-encrypt
+
+    To renew SSL
+
+sudo snap refresh
