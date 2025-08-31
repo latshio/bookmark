@@ -42,3 +42,5 @@ sudo nextcloud.enable-https lets-encrypt
     To renew SSL
 
 sudo snap refresh
+
+https://freedns.afraid.org/subdomain/
