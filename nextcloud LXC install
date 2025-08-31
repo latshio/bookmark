@@ -5,3 +5,9 @@ edit the trusted hostes
 
 
 sudo nextcloud.occ config:system:set trusted_domains 1 --value=example.com
+
+
+
+add talk to your next cloud
+
+https://www.youtube.com/watch?v=RPireLVSPAo
